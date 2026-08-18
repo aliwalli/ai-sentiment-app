@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentica AI | Text & Sentiment Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚡ Sentica AI</h1>
+            <p>Analyze text sentiment in real-time with transformer models.</p>
+        </header>
+
+        <main>
+            <div class="card">
+                <textarea id="text-input" placeholder="Type or paste text here..."></textarea>
+                <div class="actions">
+                    <button id="analyze-btn">Analyze Sentiment</button>
+                </div>
+            </div>
+
+            <div id="result-card" class="card result-card hidden">
+                <h3>Analysis Output</h3>
+                <div class="result-content">
+                    <span id="sentiment-label" class="badge">--</span>
+                    <p>Confidence: <strong id="confidence-score">0%</strong></p>
+                </div>
+            </div>
+            
+            <p id="error-msg" class="error-msg hidden"></p>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
